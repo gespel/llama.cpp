@@ -1,3 +1,4 @@
+#include "server-common.h"
 #include "server-connect.h"
 #include "server-context.h"
 #include "server-http.h"
@@ -733,6 +734,7 @@ static int server_run_instance(common_params & params, server_role & role, commo
 //
 
 static int server_run(common_params & params, int argc, char ** argv, server_role & role, const server_run_opts & opts) {
+    LOG_INF("This is a modded llama.cpp by Sten (Gespel) Heimbrodt!! :)\n");
     common_models_handler models_handler;
 
     // -hf may name a preset repo, which makes this a router: settle that before deciding the role
